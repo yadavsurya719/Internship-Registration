@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+       
+        body {
+        /* Set background image and properties */
+        background-image: url('./image2.avif');
+            background-size: cover; /* Adjust the image size to cover the entire body */
+            background-position: center; /* Center the background image */
+            font-family: Arial, sans-serif; /* Set a fallback font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Make the body take the full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center
+
+        }
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .registration-form input {
+            width: 100%;
+            padding: 1%;
+            margin-bottom: 5%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .registration-form button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5%;
+            border: none;
+            border-radius: 5%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <form method="post" action="{{ url_for('register') }}">
+       <form>
+        <div class="registration-form">
+            <h2>Registration Form</h2>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="full_name" required>
+            <label for="email">Email ID *</label>
+            <input type="email" id="email" name="email_id" required>
+            
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="dob">Date of Birth *</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="internshipMode">Mode of Internship *</label>
+            <select id="internshipMode" name="internshipMode" required>
+                <option value="offline">Offline</option>
+                <option value="online">Online</option>
+            </select>
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" name="skills">
+            <label for="Duration">Months of Internship *</label>
+            <select id="internshipDuration" name="Duration" required>
+                <option value="1">1 Month</option>
+                <option value="2">2 Months</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+            </select>
+            <label for="domain">Domain</label>
+            <input type="text" id="domain" name="domain">
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department">
+            <label for="college_name">College Name</label>
+            <input type="text" id="college_name" name="college_name">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    </form>
+</body>
+</html>

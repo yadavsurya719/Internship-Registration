@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Data</title>
+</head>
+<body>
+    <h1>Internship Data</h1>
+    <table border="1"  method="GET" action="{{ url_for('getall') }}">
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email ID</th>
+            <th>Date of Birth</th>
+            <th>Phone Number</th>
+            <th>Mode of Internship</th>
+            <th>Months</th>
+            <th>College Name</th>
+            <th>offer letter</th>
+            <th>letter of recommendation</th>
+            <th>Certificate</th>
+            <!--<th>Job Role</th>
+            <th>Salary</th>
+            <th>Experience</th>
+            <th>Recipient Name</th>
+            <th>Recipient's Title</th>
+            <th>Recipient's Company Name</th>
+            <th>Recipient Company Address</th>
+            <th>Recommended Person Name</th>
+            <th>HR Name</th>
+            <th>Start Date</th>
+            <th>Skills</th>
+            <th>Domain</th>
+            <th>Department</th>-->
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.full_name }}</td>
+            <td>{{ item.email_id }}</td>
+           <td>{{ item.date_of_birth }}</td>
+            <td>{{ item.phone_number }}</td>
+            <td>{{ item.mode_of_internship }}</td>
+           <!--<td>{{ item.skills }}</td>--> 
+            <td>{{ item.months }}</td>
+           <!-- <td>{{ item.domain }}</td> 
+            <td>{{ item.department }}</td>-->
+            <td>{{ item.college_name }}</td>
+           <!-- <td>{{ item.job_role }}</td>
+            <td>{{ item.salary }}</td>
+            <td>{{ item.experience }}</td>
+            <td>{{ item.recipient_name }}</td>
+            <td>{{ item.recipients_title }}</td>
+            <td>{{ item.recipients_compy_name }}</td>
+            <td>{{ item.recipient_company_address }}</td>
+            <td>{{ item.recommended_person_name }}</td>
+            <td>{{ item.Hr_name }}</td>
+            <td>{{ item.start_date }}</td> -->
+            <td>{{ item.offer_letter }}</td>
+            <td>{{ item.letter_of_recommendation}}</td>
+            <td>{{ item.certificate }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

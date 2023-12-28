@@ -1,0 +1,26 @@
+installations on Terminal:
+
+pip install pyhton-docx
+
+pip install docx2pdf
+
+pip install pymysql
+
+pip install flask-mysql-connector
+
+pip install flask
+
+pip install docx
+
+pip install request
+
+pip install pdf
+
+pip install flask-sqlalchemy
+
+
+Installations in windows:
+
+Python -- 3.12.0
+
+Mysql Workbench -- 8.0CE
